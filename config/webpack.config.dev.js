@@ -134,6 +134,7 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
           use: [
             { loader: "css-loader", options: { importLoaders: 1 } },
             {
